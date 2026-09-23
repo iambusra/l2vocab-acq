@@ -40,6 +40,17 @@ Planned contrasts on model-predicted probability change were:
 
 The participant-level ANCOVA robustness analysis produced the same ordering. The adjusted post-test odds ratios were 2.61 for Grounding vs Thematic, 4.45 for Grounding vs Control, and 1.71 for Thematic vs Control.
 
+Additional sensitivity analyses support the main Grounding comparisons:
+
+- All 90 leave-one-participant-out fits favored Grounding, and no planned contrast changed by more than 1.6 percentage points.
+- All 10 leave-one-target-out fits favored Grounding over both Thematic and Control. The smaller Thematic versus Control contrast was not Holm-significant when `retain` or `overlook` was omitted.
+- A 1,000-repetition crossed participant-item bootstrap gave 95% intervals of 3.1 to 31.3 percentage points for Grounding versus Thematic, 15.7 to 46.6 for Grounding versus Control, and 0.3 to 27.8 for Thematic versus Control.
+- A Bayesian model with participant and item time slopes gave posterior probabilities of a positive difference of .998, 1.000, and .982 for those same contrasts. Its sampler diagnostics were clean.
+
+The paired response transitions tell the same descriptive story. Among target responses that were wrong at pretest, 23.0% were correct at post-test in Control, 45.3% in Thematic, and 72.5% in Grounding. These are response conversions rather than pure acquisition events because the question format changed.
+
+Internal consistency of the 10 target items was low overall, KR-20 = .390 at pretest and .463 at post-test. The within-condition estimates were imprecise, and Grounding post-test KR-20 was negative under a strong ceiling. This is a real measurement warning, not evidence against the condition contrast by itself.
+
 Q11 to Q20 improved from pretest to post-test within all three conditions. Those results are descriptive and within-condition only. The pipeline does not make a causal between-condition comparison because the item sets differ.
 
 ## Reproduce the analysis
@@ -58,6 +69,8 @@ make all
 ```
 
 `make all` creates a local Python environment, installs the pinned Numbers parser, extracts the Numbers tables, rebuilds the processed data, fits every model, and regenerates all tables and figures. R package versions are recorded in `renv.lock`. Python dependencies are pinned in `requirements.txt`.
+
+The crossed bootstrap uses 1,000 repetitions and the reliability intervals use 2,000 repetitions by default. The Bayesian model uses four chains with 2,000 iterations each. These can be changed with the environment variables documented in [docs/additional-analyses.md](docs/additional-analyses.md).
 
 ## Repository layout
 
@@ -78,4 +91,3 @@ scripts/           Reproducible Numbers extraction script
 ## Privacy
 
 The data use coded participant IDs only. No names, email addresses, recruitment records, consent records, or direct identifiers are present. Figures and model tables do not display participant codes. Do not add identifying records to this repository.
-
