@@ -75,10 +75,7 @@ write_csv(tidy_fixed_effects(primary_model), "output/tables/primary_fixed_effect
 write_csv(tidy_random_effects(primary_model), "output/tables/primary_random_effects.csv")
 write_csv(omnibus_lrt, "output/tables/primary_interaction_lrt.csv")
 
-capture.output(
-  summary(primary_model),
-  file = "output/models/primary_glmm_summary.txt"
-)
+model_summary <- capture.output(summary(primary_model))
+writeLines(str_trim(model_summary, side = "right"), "output/models/primary_glmm_summary.txt")
 
 message("Selected primary model candidate ", fit_result$selected_index, ".")
-

@@ -78,9 +78,12 @@ secondary_descriptives <- secondary %>%
     .groups = "drop"
   )
 
+secondary_time_effects <- map_dfr(condition_results, "time_effect") %>%
+  mutate(p_value_holm = p.adjust(p.value, method = "holm"))
+
 write_csv(map_dfr(condition_results, "selection"), "output/diagnostics/secondary_random_effects_selection.csv")
 write_csv(map_dfr(condition_results, "fixed"), "output/tables/secondary_fixed_effects.csv")
-write_csv(map_dfr(condition_results, "time_effect"), "output/tables/secondary_within_condition_time_effects.csv")
+write_csv(secondary_time_effects, "output/tables/secondary_within_condition_time_effects.csv")
 write_csv(secondary_descriptives, "output/tables/secondary_descriptives.csv")
 
 message("Completed within-condition Q11-Q20 analyses without between-condition contrasts.")

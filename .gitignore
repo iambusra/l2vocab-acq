@@ -2,9 +2,10 @@
 .Rhistory
 .RData
 .Ruserdata
+Rplots.pdf
 .Rproj.user/
+.venv/
 renv/library/
 renv/staging/
 work/
 output/models/*.rds
-

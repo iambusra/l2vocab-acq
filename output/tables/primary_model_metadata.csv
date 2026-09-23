@@ -1,2 +1,2 @@
 outcome,family,observations,participants,items,selected_formula,selected_candidate,singular,log_likelihood,AIC,BIC
-Target-item accuracy,Binomial logit,1800,90,10,correct ~ time * condition + (1 | participant_id) + (1 | item_id),5,FALSE,-1110.990438973996,2237.980877947992,2281.945213499066
+Target-item accuracy,Binomial logit,1800,90,10,correct ~ time * condition + (1 | participant_id) + (1 | item_id),5,FALSE,-1110.9904389752637,2237.9808779505274,2281.9452135016013

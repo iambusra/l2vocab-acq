@@ -1,3 +1,3 @@
 group,term_1,term_2,variance,standard_deviation
-participant_id,(Intercept),NA,0.2919983101704357,0.5403686798570358
-item_id,(Intercept),NA,0.1955979612986996,0.44226458291242315
+participant_id,(Intercept),NA,0.29199838728523964,0.5403687512109112
+item_id,(Intercept),NA,0.19559792184058547,0.4422645383032484
