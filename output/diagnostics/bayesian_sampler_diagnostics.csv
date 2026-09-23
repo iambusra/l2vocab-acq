@@ -1,0 +1,10 @@
+metric,value
+Chains,4
+Iterations per chain,2000
+Warmup iterations per chain,1000
+Posterior draws,4000
+Divergent transitions,0
+Maximum-treedepth hits,0
+Maximum R-hat,1.0028769146587275
+Minimum bulk effective sample size,1342.2699307776934
+Minimum tail effective sample size,1966.4574878148294

@@ -1,0 +1,2 @@
+observations,participants,items,selected_formula,singular,AIC,BIC
+900,90,10,post_correct ~ pre_correct * condition + (1 | participant_id) +      (1 | item_id),TRUE,796.54719092336,834.9663490299545

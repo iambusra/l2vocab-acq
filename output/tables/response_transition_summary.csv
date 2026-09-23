@@ -1,0 +1,13 @@
+condition,transition,trials,total_trials,proportion
+Control,Incorrect to incorrect,134,300,0.44666666666666666
+Control,Incorrect to correct,40,300,0.13333333333333333
+Control,Correct to incorrect,7,300,0.023333333333333334
+Control,Correct to correct,119,300,0.39666666666666667
+Thematic,Incorrect to incorrect,94,300,0.31333333333333335
+Thematic,Incorrect to correct,78,300,0.26
+Thematic,Correct to incorrect,9,300,0.03
+Thematic,Correct to correct,119,300,0.39666666666666667
+Grounding,Incorrect to incorrect,47,300,0.15666666666666668
+Grounding,Incorrect to correct,124,300,0.41333333333333333
+Grounding,Correct to incorrect,4,300,0.013333333333333334
+Grounding,Correct to correct,125,300,0.4166666666666667

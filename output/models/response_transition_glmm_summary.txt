@@ -1,0 +1,50 @@
+Generalized linear mixed model fit by maximum likelihood (Laplace
+  Approximation) [glmerMod]
+ Family: binomial  ( logit )
+Formula: post_correct ~ pre_correct * condition + (1 | participant_id) +
+    (1 | item_id)
+   Data: transition_data
+Control: glmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 2e+05),
+    calc.derivs = TRUE)
+
+      AIC       BIC    logLik -2*log(L)  df.resid
+    796.5     835.0    -390.3     780.5       892
+
+Scaled residuals:
+    Min      1Q  Median      3Q     Max
+-5.5902 -0.5464  0.2425  0.6157  1.8303
+
+Random effects:
+ Groups         Name        Variance Std.Dev.
+ participant_id (Intercept) 0        0
+ item_id        (Intercept) 0        0
+Number of obs: 900, groups:  participant_id, 90; item_id, 10
+
+Fixed effects:
+                                              Estimate Std. Error z value
+(Intercept)                                    -1.2090     0.1802  -6.710
+pre_correctPretest correct                      4.0422     0.4286   9.431
+conditionThematic                               1.0224     0.2365   4.324
+conditionGrounding                              2.1791     0.2486   8.766
+pre_correctPretest correct:conditionThematic   -1.2737     0.5715  -2.229
+pre_correctPretest correct:conditionGrounding  -1.5703     0.6863  -2.288
+                                              Pr(>|z|)
+(Intercept)                                   1.94e-11 ***
+pre_correctPretest correct                     < 2e-16 ***
+conditionThematic                             1.53e-05 ***
+conditionGrounding                             < 2e-16 ***
+pre_correctPretest correct:conditionThematic    0.0258 *
+pre_correctPretest correct:conditionGrounding   0.0221 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) pr_cPc cndtnT cndtnG p_Pc:T
+pr_crrctPrc -0.420
+condtnThmtc -0.762  0.320
+cndtnGrndng -0.725  0.305  0.552
+pr_crrcPc:T  0.315 -0.750 -0.414 -0.228
+pr_crrcPc:G  0.262 -0.624 -0.200 -0.362  0.468
+optimizer (bobyqa) convergence code: 0 (OK)
+boundary (singular) fit: see help('isSingular')
+

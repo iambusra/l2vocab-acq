@@ -1,0 +1,47 @@
+ Family: bernoulli
+  Links: mu = logit
+Formula: correct ~ time * condition + (1 + time | participant_id) + (1 + time | item_id)
+   Data: target_responses (Number of observations: 1800)
+  Draws: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+         total post-warmup draws = 4000
+
+Multilevel Hyperparameters:
+~item_id (Number of levels: 10)
+                             Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
+sd(Intercept)                    0.56      0.16     0.32     0.94 1.00     1342
+sd(timePostMtest)                0.15      0.11     0.01     0.43 1.00     2102
+cor(Intercept,timePostMtest)    -0.30      0.43    -0.92     0.64 1.00     4024
+                             Tail_ESS
+sd(Intercept)                    2142
+sd(timePostMtest)                1966
+cor(Intercept,timePostMtest)     2939
+
+~participant_id (Number of levels: 90)
+                             Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
+sd(Intercept)                    0.58      0.09     0.42     0.76 1.00     1812
+sd(timePostMtest)                0.11      0.09     0.00     0.33 1.00     2022
+cor(Intercept,timePostMtest)    -0.15      0.45    -0.88     0.76 1.00     3752
+                             Tail_ESS
+sd(Intercept)                    2685
+sd(timePostMtest)                2372
+cor(Intercept,timePostMtest)     2335
+
+Regression Coefficients:
+                                 Estimate Est.Error l-95% CI u-95% CI Rhat
+Intercept                           -0.37      0.23    -0.82     0.10 1.00
+timePostMtest                        0.52      0.18     0.17     0.87 1.00
+conditionThematic                    0.04      0.23    -0.41     0.46 1.00
+conditionGrounding                   0.06      0.22    -0.37     0.50 1.00
+timePostMtest:conditionThematic      0.53      0.25     0.05     1.02 1.00
+timePostMtest:conditionGrounding     1.50      0.27     0.98     2.03 1.00
+                                 Bulk_ESS Tail_ESS
+Intercept                            1461     2053
+timePostMtest                        2908     3179
+conditionThematic                    2021     2399
+conditionGrounding                   2230     2399
+timePostMtest:conditionThematic      3034     2892
+timePostMtest:conditionGrounding     3083     3278
+
+Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).
