@@ -1,0 +1,11 @@
+item_pair,target_word,target_key,grounding_word,grounding_key,thematic_word,thematic_key,control_word,control_key
+1 / 11,reconsider,B,rethink,D,prepare,B,disappear,B
+2 / 12,avoidable,D,unavoidable,C,pending,C,restless,C
+3 / 13,uncertain,A,definite,A,urgent,A,uneven,D
+4 / 14,maintain,B,preserve,B,submit,D,unwrap,C
+5 / 15,settle,C,dispute,C,assign,A,brighten,A
+6 / 16,misleading,A,mislead,B,flexible,D,colorless,D
+7 / 17,discourage,C,encourage,A,arrange,B,sharpen,B
+8 / 18,retain,A,memory,D,estimate,C,wander,C
+9 / 19,overlook,D,face,A,notify,B,loosen,A
+10 / 20,engage,C,withdraw,B,record,D,tremble,B
