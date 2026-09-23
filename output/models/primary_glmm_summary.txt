@@ -1,0 +1,40 @@
+Generalized linear mixed model fit by maximum likelihood (Laplace
+  Approximation) [glmerMod]
+ Family: binomial  ( logit )
+Formula: correct ~ time * condition + (1 | participant_id) + (1 | item_id)
+   Data: data
+Control: 
+lme4::glmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 2e+05),  
+    calc.derivs = TRUE)
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+   2238.0    2281.9   -1111.0    2222.0      1792 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.4560 -0.8253  0.3622  0.8045  2.0474 
+
+Random effects:
+ Groups         Name        Variance Std.Dev.
+ participant_id (Intercept) 0.2920   0.5404  
+ item_id        (Intercept) 0.1956   0.4423  
+Number of obs: 1800, groups:  participant_id, 90; item_id, 10
+
+Fixed effects:
+                                 Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                      -0.35941    0.21101  -1.703  0.08852 .  
+timePost-test                     0.49333    0.17361   2.842  0.00449 ** 
+conditionThematic                 0.02917    0.22326   0.131  0.89605    
+conditionGrounding                0.04696    0.22288   0.211  0.83314    
+timePost-test:conditionThematic   0.55851    0.24861   2.247  0.02467 *  
+timePost-test:conditionGrounding  1.54648    0.26641   5.805 6.44e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) tmPst- cndtnT cndtnG tmP-:T
+timePst-tst -0.416                            
+condtnThmtc -0.529  0.392                     
+cndtnGrndng -0.530  0.393  0.501              
+tmPst-tst:T  0.289 -0.695 -0.548 -0.274       
+tmPst-tst:G  0.268 -0.647 -0.255 -0.510  0.457

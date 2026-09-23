@@ -1,0 +1,23 @@
+
+Call:
+glm(formula = cbind(`target_correct_Post-test`, posttest_incorrect) ~ 
+    condition + pretest_accuracy_centered, family = binomial(link = "logit"), 
+    data = ancova_data)
+
+Coefficients:
+                          Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                 0.1462     0.1192   1.226  0.22005    
+conditionThematic           0.5345     0.1721   3.107  0.00189 ** 
+conditionGrounding          1.4931     0.1964   7.603 2.89e-14 ***
+pretest_accuracy_centered   2.5040     0.4247   5.896 3.72e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 161.186  on 89  degrees of freedom
+Residual deviance:  59.129  on 86  degrees of freedom
+AIC: 286.22
+
+Number of Fisher Scoring iterations: 4
+

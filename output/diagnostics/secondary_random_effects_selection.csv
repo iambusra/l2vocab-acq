@@ -1,0 +1,16 @@
+model_label,candidate_order,formula,fitted,convergence_ok,singular,warning_count,warnings,convergence_messages,error,AIC,BIC,selected
+Control secondary-item GLMM,1,correct ~ time + (1 + time | participant_id) + (1 + time | item_id),TRUE,FALSE,TRUE,0,,boundary (singular) fit: see help('isSingular'),NA,733.2992753058037,768.4747125475328,FALSE
+Control secondary-item GLMM,2,correct ~ time + (1 + time || participant_id) + (1 + time || item_id),TRUE,FALSE,TRUE,0,,boundary (singular) fit: see help('isSingular'),NA,737.2992753195847,781.2685718717462,FALSE
+Control secondary-item GLMM,3,correct ~ time + (1 + time || participant_id) + (1 | item_id),TRUE,FALSE,TRUE,0,,boundary (singular) fit: see help('isSingular'),NA,732.1940877720747,762.9725953585877,FALSE
+Control secondary-item GLMM,4,correct ~ time + (1 | participant_id) + (1 + time || item_id),TRUE,FALSE,TRUE,0,,boundary (singular) fit: see help('isSingular'),NA,731.3237697987302,762.1022773852432,FALSE
+Control secondary-item GLMM,5,correct ~ time + (1 | participant_id) + (1 | item_id),TRUE,TRUE,FALSE,0,,,NA,726.1955677201265,743.7832863409911,TRUE
+Thematic secondary-item GLMM,1,correct ~ time + (1 + time | participant_id) + (1 + time | item_id),TRUE,FALSE,TRUE,0,,boundary (singular) fit: see help('isSingular'),NA,778.8422967075323,814.0177339492615,FALSE
+Thematic secondary-item GLMM,2,correct ~ time + (1 + time || participant_id) + (1 + time || item_id),TRUE,FALSE,TRUE,0,,boundary (singular) fit: see help('isSingular'),NA,782.8422974878829,826.8115940400444,FALSE
+Thematic secondary-item GLMM,3,correct ~ time + (1 + time || participant_id) + (1 | item_id),TRUE,FALSE,TRUE,0,,boundary (singular) fit: see help('isSingular'),NA,780.7500539162562,811.5285615027692,FALSE
+Thematic secondary-item GLMM,4,correct ~ time + (1 | participant_id) + (1 + time || item_id),TRUE,FALSE,TRUE,0,,boundary (singular) fit: see help('isSingular'),NA,776.8427748477508,807.6212824342638,FALSE
+Thematic secondary-item GLMM,5,correct ~ time + (1 | participant_id) + (1 | item_id),TRUE,TRUE,FALSE,0,,,NA,774.8104859063036,792.3982045271682,TRUE
+Grounding secondary-item GLMM,1,correct ~ time + (1 + time | participant_id) + (1 + time | item_id),TRUE,FALSE,TRUE,0,,boundary (singular) fit: see help('isSingular'),NA,788.989899230652,824.1653364723811,FALSE
+Grounding secondary-item GLMM,2,correct ~ time + (1 + time || participant_id) + (1 + time || item_id),TRUE,FALSE,TRUE,0,,boundary (singular) fit: see help('isSingular'),NA,792.9898992782051,836.9591958303666,FALSE
+Grounding secondary-item GLMM,3,correct ~ time + (1 + time || participant_id) + (1 | item_id),TRUE,FALSE,TRUE,0,,boundary (singular) fit: see help('isSingular'),NA,789.5549163360554,820.3334239225684,FALSE
+Grounding secondary-item GLMM,4,correct ~ time + (1 | participant_id) + (1 + time || item_id),TRUE,FALSE,TRUE,0,,boundary (singular) fit: see help('isSingular'),NA,787.2120613396189,817.9905689261319,FALSE
+Grounding secondary-item GLMM,5,correct ~ time + (1 | participant_id) + (1 | item_id),TRUE,TRUE,FALSE,0,,,NA,783.6226660205539,801.2103846414185,TRUE

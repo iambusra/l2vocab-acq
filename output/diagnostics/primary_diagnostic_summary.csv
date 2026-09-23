@@ -1,0 +1,10 @@
+metric,value
+Pearson chi-square,1674.58301171746
+Residual degrees of freedom,1792
+Pearson dispersion ratio,0.934477127074473
+Approximate overdispersion p-value,0.976960429250174
+Fixed-effect design matrix condition number,9.45297998405589
+Minimum fitted probability,0.1399017546665
+Maximum fitted probability,0.948911790404444
+Maximum absolute Pearson residual,3.45600428785596
+Singular fit,FALSE
