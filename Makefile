@@ -1,10 +1,10 @@
-.PHONY: all setup data analysis
+.PHONY: all setup data analysis additional
 
 PYTHON ?= .venv/bin/python
 PYTHON_ENV := .venv/pyvenv.cfg
 RSCRIPT ?= Rscript
 
-all: setup data analysis
+all: setup data analysis additional
 
 $(PYTHON_ENV): requirements.txt
 	python3 -m venv .venv
@@ -25,3 +25,13 @@ analysis:
 	$(RSCRIPT) analysis/06_figures.R
 	$(RSCRIPT) analysis/07_diagnostics.R
 	$(RSCRIPT) analysis/08_validate_outputs.R
+
+additional:
+	$(RSCRIPT) analysis/09_leave_one_item_out.R
+	$(RSCRIPT) analysis/10_participant_influence.R
+	$(RSCRIPT) analysis/11_crossed_bootstrap.R
+	$(RSCRIPT) analysis/12_response_transitions.R
+	$(RSCRIPT) analysis/13_bayesian_sensitivity.R
+	$(RSCRIPT) analysis/14_reliability.R
+	$(RSCRIPT) analysis/15_additional_figures.R
+	$(RSCRIPT) analysis/16_validate_extended_outputs.R

@@ -136,7 +136,11 @@ gain_plot <- ggplot(
 ) +
   geom_violin(width = 0.82, alpha = 0.22, linewidth = 0.7, trim = FALSE) +
   geom_boxplot(width = 0.20, outlier.shape = NA, alpha = 0.72, color = "white") +
-  geom_jitter(width = 0.10, height = 0, size = 1.3, alpha = 0.55) +
+  geom_point(
+    position = position_jitter(width = 0.10, height = 0, seed = 20260923),
+    size = 1.3,
+    alpha = 0.55
+  ) +
   geom_hline(yintercept = 0, linetype = "dashed", color = "#4B5563") +
   scale_fill_manual(values = condition_colors) +
   scale_color_manual(values = condition_colors) +
