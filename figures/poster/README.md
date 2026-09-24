@@ -35,6 +35,9 @@ The strongest compact poster story uses:
 | `11_reliability` | KR-20 estimates and bootstrap intervals |
 | `12_secondary_items` | Descriptive Q11 to Q20 changes |
 | `13_summary_plate` | Nine-panel primary and robustness summary |
+| `14_target_filler_examples` | Example shared targets and condition-specific filler words |
+| `15_target_filler_performance` | Target and filler accuracy over time |
+| `16_target_filler_plate` | Combined target-filler design and performance plate |
 
 ## Interpretation constraints
 
