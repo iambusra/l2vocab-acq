@@ -14,7 +14,9 @@ scripts <- c(
   "analysis/13_bayesian_sensitivity.R",
   "analysis/14_reliability.R",
   "analysis/15_additional_figures.R",
-  "analysis/16_validate_extended_outputs.R"
+  "analysis/16_validate_extended_outputs.R",
+  "analysis/17_poster_figures.R",
+  "analysis/18_validate_poster_figures.R"
 )
 
 for (script in scripts) {

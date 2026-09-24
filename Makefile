@@ -1,10 +1,10 @@
-.PHONY: all setup data analysis additional
+.PHONY: all setup data analysis additional poster
 
 PYTHON ?= .venv/bin/python
 PYTHON_ENV := .venv/pyvenv.cfg
 RSCRIPT ?= Rscript
 
-all: setup data analysis additional
+all: setup data analysis additional poster
 
 $(PYTHON_ENV): requirements.txt
 	python3 -m venv .venv
@@ -35,3 +35,7 @@ additional:
 	$(RSCRIPT) analysis/14_reliability.R
 	$(RSCRIPT) analysis/15_additional_figures.R
 	$(RSCRIPT) analysis/16_validate_extended_outputs.R
+
+poster:
+	$(RSCRIPT) analysis/17_poster_figures.R
+	$(RSCRIPT) analysis/18_validate_poster_figures.R
