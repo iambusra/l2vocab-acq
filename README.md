@@ -82,6 +82,7 @@ analysis/          Ordered R analysis scripts and the full pipeline runner
 R/                 Shared project, modeling, and plotting functions
 docs/              Experiment design and statistical decisions
 figures/           Publication figures in PDF and PNG formats
+figures/poster/    Poster-ready PDF, SVG, and high-resolution PNG figures
 output/models/     Plain-text model summaries
 output/tables/     Tidy CSV results and descriptive tables
 output/diagnostics Model selection records and diagnostic outputs

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='540.00pt' height='360.00pt' viewBox='0 0 540.00 360.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw1NDAuMDB8MC4wMHwzNjAuMDA='>
+    <rect x='0.00' y='0.00' width='540.00' height='360.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw1NDAuMDB8MC4wMHwzNjAuMDA=)'>
+</g>
+<defs>
+  <clipPath id='cpODAuODR8NTIyLjA3fDYyLjQ2fDI4OC4wNg=='>
+    <rect x='80.84' y='62.46' width='441.23' height='225.59' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpODAuODR8NTIyLjA3fDYyLjQ2fDI4OC4wNg==)'>
+<polyline points='84.85,288.06 84.85,62.46 ' style='stroke-width: 0.75; stroke: #E8EDF1; stroke-linecap: butt;' />
+<polyline points='165.07,288.06 165.07,62.46 ' style='stroke-width: 0.75; stroke: #E8EDF1; stroke-linecap: butt;' />
+<polyline points='245.30,288.06 245.30,62.46 ' style='stroke-width: 0.75; stroke: #E8EDF1; stroke-linecap: butt;' />
+<polyline points='325.52,288.06 325.52,62.46 ' style='stroke-width: 0.75; stroke: #E8EDF1; stroke-linecap: butt;' />
+<polyline points='405.74,288.06 405.74,62.46 ' style='stroke-width: 0.75; stroke: #E8EDF1; stroke-linecap: butt;' />
+<polyline points='485.97,288.06 485.97,62.46 ' style='stroke-width: 0.75; stroke: #E8EDF1; stroke-linecap: butt;' />
+<polyline points='240.35,110.05 240.35,99.47 ' style='stroke-width: 2.35; stroke: #566573; stroke-linecap: butt;' />
+<polyline points='240.35,104.76 147.55,104.76 ' style='stroke-width: 2.35; stroke: #566573; stroke-linecap: butt;' />
+<polyline points='147.55,110.05 147.55,99.47 ' style='stroke-width: 2.35; stroke: #566573; stroke-linecap: butt;' />
+<polyline points='338.43,180.55 338.43,169.97 ' style='stroke-width: 2.35; stroke: #008C8C; stroke-linecap: butt;' />
+<polyline points='338.43,175.26 251.20,175.26 ' style='stroke-width: 2.35; stroke: #008C8C; stroke-linecap: butt;' />
+<polyline points='251.20,180.55 251.20,169.97 ' style='stroke-width: 2.35; stroke: #008C8C; stroke-linecap: butt;' />
+<polyline points='466.00,251.04 466.00,240.47 ' style='stroke-width: 2.35; stroke: #D95F02; stroke-linecap: butt;' />
+<polyline points='466.00,245.76 398.62,245.76 ' style='stroke-width: 2.35; stroke: #D95F02; stroke-linecap: butt;' />
+<polyline points='398.62,251.04 398.62,240.47 ' style='stroke-width: 2.35; stroke: #D95F02; stroke-linecap: butt;' />
+<circle cx='194.34' cy='104.76' r='4.84' style='stroke-width: 0.71; stroke: #566573; fill: #566573;' />
+<circle cx='296.55' cy='175.26' r='4.84' style='stroke-width: 0.71; stroke: #008C8C; fill: #008C8C;' />
+<circle cx='435.78' cy='245.76' r='4.84' style='stroke-width: 0.71; stroke: #D95F02; fill: #D95F02;' />
+<text x='194.34' y='93.20' text-anchor='middle' style='font-size: 11.04px; font-weight: bold;fill: #263442; font-family: "Arial";' textLength='31.30px' lengthAdjust='spacingAndGlyphs'>53.6%</text>
+<text x='296.55' y='163.70' text-anchor='middle' style='font-size: 11.04px; font-weight: bold;fill: #263442; font-family: "Arial";' textLength='31.30px' lengthAdjust='spacingAndGlyphs'>66.4%</text>
+<text x='435.78' y='234.20' text-anchor='middle' style='font-size: 11.04px; font-weight: bold;fill: #263442; font-family: "Arial";' textLength='31.30px' lengthAdjust='spacingAndGlyphs'>83.7%</text>
+</g>
+<g clip-path='url(#cpMC4wMHw1NDAuMDB8MC4wMHwzNjAuMDA=)'>
+<text x='73.67' y='250.35' text-anchor='end' style='font-size: 12.80px;fill: #344454; font-family: "Helvetica";' textLength='59.72px' lengthAdjust='spacingAndGlyphs'>Grounding</text>
+<text x='73.67' y='179.85' text-anchor='end' style='font-size: 12.80px;fill: #344454; font-family: "Helvetica";' textLength='52.61px' lengthAdjust='spacingAndGlyphs'>Thematic</text>
+<text x='73.67' y='109.35' text-anchor='end' style='font-size: 12.80px;fill: #344454; font-family: "Helvetica";' textLength='41.23px' lengthAdjust='spacingAndGlyphs'>Control</text>
+<text x='84.85' y='304.41' text-anchor='middle' style='font-size: 12.80px;fill: #344454; font-family: "Helvetica";' textLength='25.59px' lengthAdjust='spacingAndGlyphs'>40%</text>
+<text x='165.07' y='304.41' text-anchor='middle' style='font-size: 12.80px;fill: #344454; font-family: "Helvetica";' textLength='25.59px' lengthAdjust='spacingAndGlyphs'>50%</text>
+<text x='245.30' y='304.41' text-anchor='middle' style='font-size: 12.80px;fill: #344454; font-family: "Helvetica";' textLength='25.59px' lengthAdjust='spacingAndGlyphs'>60%</text>
+<text x='325.52' y='304.41' text-anchor='middle' style='font-size: 12.80px;fill: #344454; font-family: "Helvetica";' textLength='25.59px' lengthAdjust='spacingAndGlyphs'>70%</text>
+<text x='405.74' y='304.41' text-anchor='middle' style='font-size: 12.80px;fill: #344454; font-family: "Helvetica";' textLength='25.59px' lengthAdjust='spacingAndGlyphs'>80%</text>
+<text x='485.97' y='304.41' text-anchor='middle' style='font-size: 12.80px;fill: #344454; font-family: "Helvetica";' textLength='25.59px' lengthAdjust='spacingAndGlyphs'>90%</text>
+<text x='301.45' y='322.74' text-anchor='middle' style='font-size: 16.00px; font-weight: bold;fill: #263442; font-family: "Helvetica";' textLength='213.56px' lengthAdjust='spacingAndGlyphs'>Adjusted probability correct</text>
+<text x='13.95' y='49.25' style='font-size: 14.72px;fill: #455565; font-family: "Helvetica";' textLength='360.53px' lengthAdjust='spacingAndGlyphs'>Participant-level binomial ANCOVA robustness analysis</text>
+<text x='13.95' y='27.53' style='font-size: 18.88px; font-weight: bold;fill: #18212B; font-family: "Helvetica";' textLength='319.97px' lengthAdjust='spacingAndGlyphs'>Pretest-adjusted post-test accuracy</text>
+<text x='13.95' y='343.51' style='font-size: 11.52px;fill: #5F6F7F; font-family: "Helvetica";' textLength='267.06px' lengthAdjust='spacingAndGlyphs'>Predictions are evaluated at the mean pretest score.</text>
+</g>
+</g>
+</svg>
