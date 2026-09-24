@@ -16,7 +16,10 @@ figure_names <- c(
   "10_response_transitions",
   "11_reliability",
   "12_secondary_items",
-  "13_summary_plate"
+  "13_summary_plate",
+  "14_target_filler_examples",
+  "15_target_filler_performance",
+  "16_target_filler_plate"
 )
 required_files <- as.vector(outer(
   file.path("figures/poster", figure_names),
@@ -24,7 +27,7 @@ required_files <- as.vector(outer(
   paste0
 ))
 
-stopifnot(length(required_files) == 39L)
+stopifnot(length(required_files) == 48L)
 stopifnot(all(file.exists(required_files)))
 stopifnot(all(file.info(required_files)$size > 1000))
 
@@ -39,4 +42,4 @@ stopifnot(all(map_lgl(png_files, function(path) {
 svg_files <- file.path("figures/poster", paste0(figure_names, ".svg"))
 stopifnot(all(map_lgl(svg_files, ~ any(str_detect(readLines(.x, n = 5), "<svg")))))
 
-message("Poster figure validation passed: 13 figures in PDF, SVG, and high-resolution PNG formats.")
+message("Poster figure validation passed: 16 figures in PDF, SVG, and high-resolution PNG formats.")

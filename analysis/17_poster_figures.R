@@ -577,6 +577,202 @@ secondary_plot <- ggplot(
   ) +
   theme_poster()
 
+word_cards <- tibble(
+  condition = factor(condition_levels, levels = condition_levels),
+  center = c(2.1, 6.5, 10.9),
+  header = c(
+    "CONTROL",
+    "THEMATIC",
+    "GROUNDING"
+  ),
+  organization = c(
+    "Presented independently",
+    "Co-occur in shared contexts",
+    "Explicit lexical-semantic links"
+  ),
+  symbol = c("|", "···", ""),
+  filler_examples = c(
+    "disappear\nrestless\nuneven\nunwrap",
+    "prepare\npending\nurgent\nsubmit",
+    "rethink\nunavoidable\ndefinite\npreserve"
+  ),
+  card_fill = c("#EEF1F4", "#E4F4F2", "#FCE9DD")
+) %>%
+  mutate(
+    xmin = center - 1.95,
+    xmax = center + 1.95,
+    header_fill = unname(poster_condition_colors[as.character(condition)])
+  )
+target_examples <- "reconsider\navoidable\nuncertain\nmaintain"
+
+word_design_plot <- ggplot() +
+  geom_rect(
+    data = word_cards,
+    aes(xmin = xmin, xmax = xmax, ymin = 0.7, ymax = 7.0, fill = card_fill),
+    color = "#D6DEE5",
+    linewidth = 0.8,
+    show.legend = FALSE
+  ) +
+  geom_rect(
+    data = word_cards,
+    aes(xmin = xmin, xmax = xmax, ymin = 6.2, ymax = 7.0, fill = header_fill),
+    color = NA,
+    show.legend = FALSE
+  ) +
+  geom_text(
+    data = word_cards,
+    aes(x = center, y = 6.62, label = header),
+    color = "white",
+    fontface = "bold",
+    size = 5.4
+  ) +
+  geom_text(
+    data = word_cards,
+    aes(x = center, y = 5.72, label = organization),
+    color = "#263442",
+    fontface = "bold",
+    size = 4.1
+  ) +
+  geom_text(
+    data = word_cards,
+    aes(x = center - 1.05, y = 5.05, label = "SHARED TARGETS"),
+    color = "#5F6F7F",
+    fontface = "bold",
+    size = 3.5
+  ) +
+  geom_text(
+    data = word_cards,
+    aes(x = center + 1.05, y = 5.05, label = "FILLERS"),
+    color = "#5F6F7F",
+    fontface = "bold",
+    size = 3.5
+  ) +
+  geom_text(
+    data = word_cards,
+    aes(x = center - 1.05, y = 3.45, label = target_examples),
+    color = "#18212B",
+    lineheight = 1.55,
+    size = 4.6
+  ) +
+  geom_text(
+    data = word_cards,
+    aes(x = center, y = 3.45, label = symbol),
+    color = "#617181",
+    fontface = "bold",
+    size = 7.0
+  ) +
+  geom_segment(
+    data = word_cards %>% filter(condition == "Grounding"),
+    aes(x = center - 0.22, xend = center + 0.22, y = 3.45, yend = 3.45),
+    color = "#617181",
+    linewidth = 1.1,
+    arrow = grid::arrow(
+      angle = 28,
+      length = grid::unit(0.12, "inches"),
+      ends = "both",
+      type = "closed"
+    )
+  ) +
+  geom_text(
+    data = word_cards,
+    aes(x = center + 1.05, y = 3.45, label = filler_examples),
+    color = "#18212B",
+    lineheight = 1.55,
+    size = 4.6
+  ) +
+  scale_fill_identity() +
+  coord_cartesian(xlim = c(0, 13), ylim = c(0.55, 7.1), clip = "off") +
+  labs(
+    title = "Same targets, different lexical neighborhoods",
+    subtitle = "Illustrative target and filler words from the three instructional conditions",
+    caption = "Examples use Q1 to Q4 targets and Q11 to Q14 fillers. Dots indicate contextual co-occurrence, not word-to-word pairing."
+  ) +
+  theme_void(base_size = 16, base_family = "Helvetica") +
+  theme(
+    plot.title = element_text(face = "bold", size = 22, color = "#18212B"),
+    plot.subtitle = element_text(size = 16, color = "#455565", margin = margin(b = 12)),
+    plot.caption = element_text(size = 11, color = "#5F6F7F", hjust = 0, margin = margin(t = 10)),
+    plot.margin = margin(16, 18, 16, 18)
+  )
+
+performance_source <- read_csv(
+  "output/tables/descriptive_condition_time.csv",
+  show_col_types = FALSE
+) %>%
+  mutate(
+    condition = factor(condition, levels = condition_levels),
+    time = factor(time, levels = time_levels)
+  )
+word_set_performance <- bind_rows(
+  performance_source %>%
+    transmute(
+      condition,
+      time,
+      word_set = "Shared targets, Q1 to Q10",
+      accuracy = target_mean_accuracy,
+      standard_error = target_se_accuracy
+    ),
+  performance_source %>%
+    transmute(
+      condition,
+      time,
+      word_set = "Condition-specific fillers, Q11 to Q20",
+      accuracy = secondary_mean_accuracy,
+      standard_error = secondary_se_accuracy
+    )
+) %>%
+  mutate(
+    word_set = factor(
+      word_set,
+      levels = c(
+        "Shared targets, Q1 to Q10",
+        "Condition-specific fillers, Q11 to Q20"
+      )
+    ),
+    conf_low = pmax(0, accuracy - 1.96 * standard_error),
+    conf_high = pmin(1, accuracy + 1.96 * standard_error),
+    label_y = accuracy + recode(
+      as.character(condition),
+      Control = 0.045,
+      Thematic = 0,
+      Grounding = -0.045
+    )
+  )
+
+target_filler_plot <- ggplot(
+  word_set_performance,
+  aes(x = time, y = accuracy, color = condition, group = condition)
+) +
+  geom_line(linewidth = 1.45) +
+  geom_errorbar(
+    aes(ymin = conf_low, ymax = conf_high),
+    width = 0.07,
+    linewidth = 0.9
+  ) +
+  geom_point(size = 4.2) +
+  geom_text(
+    aes(y = label_y, label = percent(accuracy, accuracy = 1)),
+    nudge_x = 0.10,
+    fontface = "bold",
+    size = 4.0,
+    show.legend = FALSE
+  ) +
+  facet_wrap(~ word_set, nrow = 1) +
+  scale_color_manual(values = poster_condition_colors) +
+  scale_y_continuous(
+    labels = percent_axis,
+    breaks = seq(0.3, 0.9, 0.1),
+    limits = c(0.30, 0.92)
+  ) +
+  labs(
+    title = "Target and filler performance over time",
+    subtitle = "Shared targets separate strongly by condition; filler gains are descriptive within each condition",
+    x = NULL,
+    y = "Mean accuracy",
+    caption = "Target items are identical across conditions. Filler items differ by condition, so the filler panel does not support a between-condition comparison."
+  ) +
+  theme_poster(base_size = 15)
+
 save_poster_figure(primary_plot, "01_primary_learning_curve", 8.0, 5.8)
 save_poster_figure(contrast_plot, "02_primary_contrasts", 8.0, 5.2)
 save_poster_figure(gain_plot, "03_gain_distributions", 7.6, 5.7)
@@ -617,5 +813,13 @@ summary_plate <- (
   )
 
 save_poster_figure(summary_plate, "13_summary_plate", 24, 21, dpi = 300)
+save_poster_figure(word_design_plot, "14_target_filler_examples", 13.5, 7.0)
+save_poster_figure(target_filler_plot, "15_target_filler_performance", 12.0, 6.0)
 
-message("Saved 13 poster-ready figures as PDF, SVG, and high-resolution PNG files.")
+target_filler_plate <- (word_design_plot / target_filler_plot) +
+  plot_layout(heights = c(1.08, 1)) +
+  plot_annotation(tag_levels = "A") &
+  theme(plot.tag = element_text(face = "bold", size = 18, color = "#18212B"))
+save_poster_figure(target_filler_plate, "16_target_filler_plate", 13.5, 13.0, dpi = 400)
+
+message("Saved 16 poster-ready figures as PDF, SVG, and high-resolution PNG files.")
